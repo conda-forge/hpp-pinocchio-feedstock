@@ -1,5 +1,5 @@
 {% set name = "hpp-pinocchio" %}
-{% set version = "4.10.1" %}
+{% set version = "4.10.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 461a5715b9f8d5d6a9a3626c400fc3ec0d7f968687e745e89a252f1fc3257ad1
+  sha256: 3d9e7d0cb360711246c9e08e5b1cdc757b43941cafb75e3b21db810df5358250
 
 build:
   number: 0
@@ -50,7 +50,7 @@ about:
   home: https://github.com/humanoid-path-planner/{{ name }}
   license: LGPL-3.0-or-later
   license_file: COPYING
-  summary: '{{ name }} subpackage of Humanoid Path Planner suite'
+  summary: {{ name }} subpackage of Humanoid Path Planner suite
   description: |
     HPP (Humanoid Path Planner) is a collection of software packages implementing
     path planning functionalities for a humanoid robot. The core functionalities are well
