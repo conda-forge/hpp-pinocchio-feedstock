@@ -1,5 +1,5 @@
 {% set name = "hpp-pinocchio" %}
-{% set version = "4.10.2" %}
+{% set version = "4.13.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3d9e7d0cb360711246c9e08e5b1cdc757b43941cafb75e3b21db810df5358250
+  sha256: 23e85049ea41cece0546e2f7ed758b839b2007351e35d319ba1ac4cabe25840a
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
@@ -30,8 +30,8 @@ requirements:
     - assimp
     - octomap
     - hpp-fcl
-    - hpp-util
-    - hpp-environments
+    - hpp-util  {{ version }}
+    - hpp-environments  {{ version }}
     - pinocchio
     - example-robot-data
   run:
@@ -62,3 +62,4 @@ about:
 extra:
   recipe-maintainers:
     - ymontmarin
+    - jcarpent
