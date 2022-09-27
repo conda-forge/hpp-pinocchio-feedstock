@@ -26,8 +26,8 @@ requirements:
     - boost-cpp  1.74.0
     - tinyxml
     - eigen
-    - urdfdom
-    - assimp
+    - urdfdom  2.3.5
+    - assimp  5.2.3
     - octomap
     - hpp-fcl  1.8.1
     - pinocchio  2.6.4
