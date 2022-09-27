@@ -30,9 +30,9 @@ requirements:
     - assimp
     - octomap
     - hpp-fcl  1.8.1
+    - pinocchio  2.6.4
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
-    - pinocchio
     - example-robot-data
   run:
     - boost-cpp
