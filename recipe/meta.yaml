@@ -29,7 +29,7 @@ requirements:
     - urdfdom
     - assimp
     - octomap
-    - hpp-fcl
+    - hpp-fcl  1.8.1
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
     - pinocchio
