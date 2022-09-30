@@ -34,9 +34,11 @@ requirements:
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
     - example-robot-data
+    - python
   run:
     - boost-cpp
     - tinyxml
+    - python
 
 test:
   requires:
