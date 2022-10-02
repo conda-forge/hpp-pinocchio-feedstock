@@ -22,6 +22,8 @@ requirements:
     - make
     - pkg-config
     - doxygen
+    - hpp-fcl  1.8.1              # [build_platform != target_platform]
+    - pinocchio                   # [build_platform != target_platform]
   host:
     - boost-cpp
     - tinyxml
@@ -34,11 +36,11 @@ requirements:
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
     - example-robot-data
-    - python
   run:
     - boost-cpp
+    - hpp-fcl
+    - pinocchio
     - tinyxml
-    - python
 
 test:
   requires:
