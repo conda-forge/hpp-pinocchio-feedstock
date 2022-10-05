@@ -10,7 +10,7 @@ source:
   sha256: 23e85049ea41cece0546e2f7ed758b839b2007351e35d319ba1ac4cabe25840a
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
@@ -22,20 +22,24 @@ requirements:
     - make
     - pkg-config
     - doxygen
+    - hpp-fcl  1.8.1              # [build_platform != target_platform]
+    - pinocchio                   # [build_platform != target_platform]
   host:
-    - boost-cpp  1.74.0
+    - boost-cpp
     - tinyxml
     - eigen
-    - urdfdom  2.3.5
-    - assimp  5.2.3
+    - urdfdom
+    - assimp
     - octomap
     - hpp-fcl  1.8.1
-    - pinocchio  2.6.4
+    - pinocchio
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
-    - example-robot-data  3.9.1
+    - example-robot-data
   run:
-    - boost-cpp  1.74.0
+    - boost-cpp
+    - hpp-fcl
+    - pinocchio
     - tinyxml
 
 test:
