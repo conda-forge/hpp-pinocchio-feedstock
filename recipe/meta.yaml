@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3c995ecaea0560b04514f5a8f82cf8a8b1745755bf975c880018c9cb0afe1405
+  patches:
+    - patches/fix_osx_deprecated.patch  # [osx]
 
 build:
   number: 0
