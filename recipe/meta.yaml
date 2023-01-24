@@ -22,7 +22,7 @@ requirements:
     - make
     - pkg-config
     - doxygen
-    - hpp-fcl  1.8.1              # [build_platform != target_platform]
+    - hpp-fcl                     # [build_platform != target_platform]
     - pinocchio                   # [build_platform != target_platform]
   host:
     - boost-cpp
@@ -31,7 +31,7 @@ requirements:
     - urdfdom
     - assimp
     - octomap
-    - hpp-fcl  1.8.1
+    - hpp-fcl
     - pinocchio
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
