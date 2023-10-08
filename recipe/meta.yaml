@@ -10,7 +10,7 @@ source:
   sha256: e4cd2801efd103b1254f917c6193fb6874bcfc770e27b83279fa5c2a7b8a9315
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
@@ -25,7 +25,7 @@ requirements:
     - hpp-fcl                     # [build_platform != target_platform]
     - pinocchio                   # [build_platform != target_platform]
   host:
-    - boost-cpp
+    - libboost-devel
     - tinyxml
     - eigen
     - urdfdom
@@ -37,7 +37,6 @@ requirements:
     - hpp-environments  {{ version }}
     - example-robot-data
   run:
-    - boost-cpp
     - hpp-fcl
     - pinocchio
     - tinyxml
