@@ -1,5 +1,9 @@
 assimp:
 - 5.3.1
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.12'
 cdt_name:
 - cos6
 channel_sources:
@@ -17,4 +21,7 @@ libboost_devel:
 target_platform:
 - linux-64
 urdfdom:
-- '3.1'
+- '4.0'
+zip_keys:
+- - c_stdlib_version
+  - cdt_name
