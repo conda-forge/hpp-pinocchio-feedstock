@@ -1,0 +1,40 @@
+From 6ba63251a1994bcd307dc7be287ea7b76ad28053 Mon Sep 17 00:00:00 2001
+From: Yann Mont-Marin <yann.montmarin@gmail.com>
+Date: Mon, 29 Apr 2024 17:55:28 +0200
+Subject: [PATCH] patch
+
+---
+ include/hpp/pinocchio/device-sync.hh | 4 ++--
+ src/simple-device.cc                 | 1 -
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+diff --git include/hpp/pinocchio/device-sync.hh include/hpp/pinocchio/device-sync.hh
+index cc7485a..7b59944 100644
+--- include/hpp/pinocchio/device-sync.hh
++++ include/hpp/pinocchio/device-sync.hh
+@@ -151,9 +151,9 @@ class HPP_PINOCCHIO_DLLAPI AbstractDevice {
+ 
+   /// \deprecated Use computeForwardKinematics(Computation_t) instead to select
+   /// what should be computed.
+-  void controlComputation(const Computation_t&) HPP_PINOCCHIO_DEPRECATED {}
++  HPP_PINOCCHIO_DEPRECATED void controlComputation(const Computation_t&) {}
+   /// \deprecated returns COMPUTE_ALL
+-  Computation_t computationFlag() const HPP_PINOCCHIO_DEPRECATED {
++  HPP_PINOCCHIO_DEPRECATED Computation_t computationFlag() const {
+     return COMPUTE_ALL;
+   }
+   /// Compute forward kinematics computing everything
+diff --git src/simple-device.cc src/simple-device.cc
+index 207aa26..47f8d56 100644
+--- src/simple-device.cc
++++ src/simple-device.cc
+@@ -99,7 +99,6 @@ DevicePtr_t humanoidSimple(const std::string& name, Computation_t compFlags) {
+   humanoidRandom(robot->model());
+   robot->createData();
+   robot->createGeomData();
+-  robot->controlComputation(compFlags);
+   robot->currentConfiguration(robot->neutralConfiguration());
+   robot->computeForwardKinematics(compFlags);
+ 
+-- 
+2.25.1
