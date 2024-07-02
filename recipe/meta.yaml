@@ -1,5 +1,5 @@
 {% set name = "hpp-pinocchio" %}
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdda37c034f9d8466d09df9dacaeb9b6cbdb0f4020b4f444d05aadc301b4cef1
+  sha256: b641ff263bc43688f9340ed8e20eca82c8cd02698e56e30587ba365f041e5be4
   patches:
-  - patches/osx_deprecated.patch  # [osx]
+    - patches/osx_deprecated.patch # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
