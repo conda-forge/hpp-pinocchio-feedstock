@@ -34,11 +34,13 @@ requirements:
     - octomap
     - hpp-fcl
     - pinocchio
+    - qhull
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
     - example-robot-data
   run:
     - hpp-fcl
+    - qhull
     - pinocchio
     - tinyxml
 
