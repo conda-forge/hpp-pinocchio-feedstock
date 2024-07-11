@@ -40,7 +40,6 @@ requirements:
     - example-robot-data
   run:
     - hpp-fcl
-    - qhull
     - pinocchio
     - tinyxml
 
