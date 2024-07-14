@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 MACOSX_SDK_VERSION:
 - '10.13'
 assimp:
-- 5.3.1
+- 5.4.1
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -20,6 +20,8 @@ libboost_devel:
 - '1.84'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+qhull:
+- '2020.2'
 target_platform:
 - osx-64
 urdfdom:
