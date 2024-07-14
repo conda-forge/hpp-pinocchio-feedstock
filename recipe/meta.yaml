@@ -35,6 +35,7 @@ requirements:
     - hpp-fcl
     - pinocchio
     - qhull
+    - qhull-static
     - hpp-util  {{ version }}
     - hpp-environments  {{ version }}
     - example-robot-data
