@@ -27,7 +27,7 @@ requirements:
     - pinocchio                   # [build_platform != target_platform]
   host:
     - libboost-devel
-    - tinyxml
+    - tinyxml2
     - eigen
     - urdfdom
     - assimp
@@ -42,7 +42,7 @@ requirements:
   run:
     - hpp-fcl
     - pinocchio
-    - tinyxml
+    - tinyxml2
 
 test:
   requires:
