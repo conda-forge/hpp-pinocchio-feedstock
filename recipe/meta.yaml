@@ -10,7 +10,7 @@ source:
   sha256: 1dc939a120d814705e1c1462562338d54914f0f50db4f543fd960ed70ba7f918
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
@@ -27,8 +27,8 @@ requirements:
     - pinocchio                   # [build_platform != target_platform]
   host:
     - libboost-devel
-    - tinyxml
-    - eigen
+    - tinyxml2
+    - eigen  3.4
     - urdfdom
     - assimp
     - octomap
@@ -42,7 +42,7 @@ requirements:
   run:
     - hpp-fcl
     - pinocchio
-    - tinyxml
+    - tinyxml2
 
 test:
   requires:
