@@ -23,7 +23,6 @@ requirements:
     - make
     - pkg-config
     - doxygen
-    - hpp-fcl                     # [build_platform != target_platform]
     - pinocchio                   # [build_platform != target_platform]
   host:
     - libboost-devel
@@ -32,7 +31,6 @@ requirements:
     - urdfdom
     - assimp
     - octomap
-    - hpp-fcl
     - pinocchio
     - qhull
     - qhull-static
