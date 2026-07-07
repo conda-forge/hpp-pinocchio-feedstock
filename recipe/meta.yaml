@@ -28,7 +28,7 @@ requirements:
   host:
     - libboost-devel
     - tinyxml2
-    - eigen  3.4
+    - eigen
     - urdfdom
     - assimp
     - octomap
